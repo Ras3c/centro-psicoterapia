@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { BiMenu, BiX } from "react-icons/bi";
 import { RiNextjsFill } from "react-icons/ri";
+import Image from "next/image";
+
 
 export default function Navbar() {
 
@@ -50,7 +52,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center"> 
             <Link href="/">
-              Terapia Plural
+              <Image src="/images/fondo_tras.png" alt="Logo" width={220} height={220} className="inline-block ml-2" />
             </Link>
           </div>
 

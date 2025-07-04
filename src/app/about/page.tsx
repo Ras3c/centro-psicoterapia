@@ -40,7 +40,7 @@ export default function About() {
               <Clock className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
                 <h3 className="font-medium text-gray-800">Horario de atención</h3>
-                <p className="text-gray-600">Lunes a Viernes: 9:00 am - 7:00 pm<br />Sábados: 10:00 am - 2:00 pm</p>
+                <p className="text-gray-600">Lunes a Viernes: Solo con cita<br />Domingo: Cerrado</p>
               </div>
             </div>
 
@@ -48,7 +48,7 @@ export default function About() {
               <Phone className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
                 <h3 className="font-medium text-gray-800">Teléfono</h3>
-                <p className="text-gray-600">+52 33 1234 5678</p>
+                <p className="text-gray-600">+52 33 3066 7246</p>
               </div>
             </div>
 
@@ -56,7 +56,7 @@ export default function About() {
               <Mail className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
                 <h3 className="font-medium text-gray-800">Correo electrónico</h3>
-                <p className="text-gray-600">contacto@centropsicoterapia.com</p>
+                <p className="text-gray-600">psicoterapiageneroconsulta@gmail.com</p>
               </div>
             </div>
           </div>

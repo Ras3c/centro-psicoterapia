@@ -1,77 +1,153 @@
+"use client";
 import Link from "next/link";
-import { Heart, Users, AlertTriangle, Calendar, ArrowRight, Phone } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
+import { Heart, Users, AlertTriangle, Calendar, ArrowRight, Phone, ChevronDown, ChevronUp } from "lucide-react";
 
-const services = [
+interface ServiceItem {
+  text: string;
+  description: string;
+  icon: React.ReactNode;
+}
+
+const services: ServiceItem[] = [
   {
     text: "Terapia individual para adolescentes y adultos",
+    description: "Sesiones personalizadas diseñadas para abordar las necesidades específicas de cada individuo, ya sea adolescente o adulto. Trabajamos en problemas como ansiedad, depresión, estrés, manejo emocional y desarrollo personal. Utilizamos enfoques terapéuticos basados en evidencia para ayudar a los pacientes a entender sus patrones de pensamiento, mejorar sus relaciones y desarrollar herramientas para enfrentar los desafíos de la vida. Cada sesión es un espacio seguro y confidencial para el crecimiento personal.",
     icon: <Heart className="w-5 h-5 text-blue-600" />
   },
   {
     text: "Terapia de pareja",
+    description: "Terapia especializada para parejas que buscan mejorar su relación, resolver conflictos o superar crisis. Trabajamos en comunicación efectiva, resolución de problemas, intimidad emocional y reconstrucción de confianza. Nuestro enfoque ayuda a las parejas a entender dinámicas disfuncionales, establecer límites saludables y redescubrir la conexión emocional. Ideal para parejas en cualquier etapa de su relación, ya sea que estén pasando por dificultades específicas o simplemente quieran fortalecer su vínculo.",
     icon: <Users className="w-5 h-5 text-blue-600" />
   },
   {
     text: "Apoyo psicológico en crisis emocionales",
+    description: "Intervención profesional inmediata para situaciones de crisis emocional como pérdidas traumáticas, ataques de pánico, ideación suicida o eventos impactantes. Ofrecemos herramientas de emergencia para manejar emociones abrumadoras, técnicas de grounding para ansiedad aguda y estrategias para recuperar el equilibrio emocional. Este servicio está diseñado para proporcionar contención y orientación en momentos de máxima vulnerabilidad, ayudando a estabilizar la situación y planificar los siguientes pasos hacia la recuperación.",
     icon: <AlertTriangle className="w-5 h-5 text-blue-600" />
   },
   {
     text: "Talleres de desarrollo personal",
+    description: "Programas grupales interactivos enfocados en el crecimiento personal y el bienestar emocional. Cubrimos temas como inteligencia emocional, manejo del estrés, autoestima, comunicación asertiva y establecimiento de metas. Estos talleres combinan teoría psicológica con ejercicios prácticos, proporcionando a los participantes herramientas concretas para su vida diaria. Ideal para quienes buscan desarrollo personal en un ambiente grupal de apoyo mutuo, con la guía de profesionales especializados.",
     icon: <Calendar className="w-5 h-5 text-blue-600" />
   }
 ];
 
+
 export default function Home() {
+
+  const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>({});
+
+  const toggleItem = (index: number) => {
+    setExpandedItems(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }));
+  };
+
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center"  >
-      <section className="min-h-screen w-full flex items-center">
-        <div className="text-center md:text-left">
-          <h1 className="text-5xl md:text-5xl font-semibold mb-4 text-center">
+    <div>
+
+    <div className="min-h-screen w-full flex flex-col items-center justify-center">
+    <section className=" h-screen w-full">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/fondo_tras.png" // Ensure this is in your public folder
+            alt="Background"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        {/* <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4 sm:px-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg mb-6 max-w-4xl">
             Centro de Psicoterapia y Sexología basado en estudios de Género
           </h1>
-          <p className="text-lg md:text-xl leading-relaxed text-gray-700 mx-auto md:mx-0 text-center">
+          <p className="text-xl md:text-2xl text-blue/90 drop-shadow-md max-w-3xl leading-relaxed">
             Acompañamos tu proceso de crecimiento y bienestar emocional. Nuestro equipo de profesionales está comprometido con brindarte un espacio seguro, confidencial y empático.
           </p>
-        </div>
-      </section>
+        </div> */}
+    </section>
+    </div>
+    <div className="min-h-screen w-full flex flex-col items-center justify-center">
 
-      <section className="min-h-screen w-full flex items-center">
-        <div className="rounded-xl p-6 md:p-8">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-800 flex items-center">
+    <section className="min-h-screen w-full flex items-center">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-800 text-center">
             ¿Qué ofrecemos?
           </h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {services.map((service, index) => (
-              <li key={index} className="flex items-start space-x-3 bg-white p-4 rounded-lg shadow-sm">
-                <span className="mt-0.5">{service.icon}</span>
-                <span className="text-gray-700">{service.text}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="w-full">
+            <ul className="space-y-4 w-full max-w-4xl mx-auto">
+              {services.map((service, index) => (
+                <li 
+                  key={index} 
+                  className="bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-200 w-full"
+                >
+                  <button
+                    onClick={() => {
+                      // Close all other items when opening this one
+                      const newState: Record<number, boolean> = {};
+                      services.forEach((_, i) => {
+                        newState[i] = i === index ? !expandedItems[index] : false;
+                      });
+                      setExpandedItems(newState);
+                    }}
+                    className="w-full flex justify-between items-center p-6 text-left hover:bg-gray-50 transition-colors"
+                    aria-expanded={expandedItems[index]}
+                    aria-controls={`service-desc-${index}`}
+                  >
+                    <div className="flex items-center space-x-4">
+                      <span className="flex-shrink-0">{service.icon}</span>
+                      <span className="font-medium text-gray-800 text-lg">{service.text}</span>
+                    </div>
+                    {expandedItems[index] ? (
+                      <ChevronUp className="w-6 h-6 text-gray-500 flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="w-6 h-6 text-gray-500 flex-shrink-0" />
+                    )}
+                  </button>
+                  
+                  <div
+                    id={`service-desc-${index}`}
+                    className={`px-6 pb-6 pt-2 text-gray-600 transition-all duration-200 ${expandedItems[index] ? 'block' : 'hidden'}`}
+                  >
+                    <p className="pl-10 text-base leading-relaxed">{service.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section className="min-h-screen w-full flex items-center">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">Conócenos</h2>
-            <p className="text-gray-700 mb-6 text-lg">
-              Nuestro centro está formado por psicólogos con amplia experiencia en distintas áreas de la salud mental. Trabajamos desde un enfoque humano, ético y profesional con perspectiva de género.
-            </p>
+      <div className="mx-auto max-w-md overflow-hidden rounded-xl bg-white shadow-md md:max-w-3xl">
+        <div className="md:flex">
+          <div className="md:shrink-0">
+            <Image
+              src="/images/psico_2.png"
+              width={400}
+              height={300}
+              alt="Psicología y Sexología"
+              />
+          </div>
+          <div className="p-8">
+            <div className="text-sm font-semibold tracking-wide text-indigo-500 uppercase">Conócenos</div>
             <Link 
               href="/about" 
               className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"
             >
               Leer más sobre nosotros <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
-          </div>
-          <div className="bg-blue-50 rounded-xl aspect-video flex items-center justify-center">
-            <div className="text-center p-6">
-              <Users className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-              <p className="text-blue-600 font-medium">Equipo profesional especializado</p>
-            </div>
+            <p className="mt-2 text-gray-500">
+              Nuestro centro está formado por psicólogos con amplia experiencia en distintas áreas de la salud mental. Trabajamos desde un enfoque humano, ético y profesional con perspectiva de género.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+
+     
 
       <section className="min-h-screen w-full flex items-center justify-center">
         <div className="text-center md:text-left">
@@ -87,6 +163,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+    </div>
     </div>
  
   );

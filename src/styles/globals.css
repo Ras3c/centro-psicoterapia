@@ -4,11 +4,11 @@
 @tailwind utilities;
 
 :root {
-  --color-background: #eff5f4;
-  --color-text: #38303b;
+  --color-background: #b1bbbc;
+  --color-text: #4a5c72;
   --color-title: #4a5c72;
   --color-button: #81a7b0;
-  --color-button-hover: #aa6a69;
+  --color-button-hover: #4a5c72;
   --color-border: #b1bbbc;
   --color-accent: #f3a1a0;
   --color-accent-alt: #d9aea8;
