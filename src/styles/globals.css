@@ -4,8 +4,8 @@
 @tailwind utilities;
 
 :root {
-  --color-background: #b1bbbc;
-  --color-text: #4a5c72;
+  --color-background: #e2f2f6
+  --color-text:rgb(0, 0, 0);
   --color-title: #4a5c72;
   --color-button: #81a7b0;
   --color-button-hover: #4a5c72;
@@ -17,36 +17,10 @@
 body {
   background-color: var(--color-background);
   color: var(--color-text);
-  font-family: var(--font-sans);
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-title);
-}
-
-button {
-  background-color: var(--color-button);
-  color: white;
-}
-
-button:hover {
-  background-color: var(--color-button-hover);
-}
-
-input, textarea {
-  border-color: var(--color-border);
-  background-color: white;
-}
-
-hr {
-  border-color: var(--color-border);
-}
-
-.text-title {
-  color: var(--color-title);
-}
-
-.font-medium {
-  font-weight: 500;
+.servicios-title{
+  color: #222651;
+  font-size: 200%
 }

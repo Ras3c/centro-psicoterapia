@@ -31,7 +31,7 @@ export default function About() {
             <div className="flex items-start">
               <MapPin className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
-                <h3 className="font-medium text-gray-800">Dirección</h3>
+                <h3 className=" text-gray-800">Dirección</h3>
                 <p className="text-gray-600">{location.address}</p>
               </div>
             </div>
@@ -39,7 +39,7 @@ export default function About() {
             <div className="flex items-start">
               <Clock className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
-                <h3 className="font-medium text-gray-800">Horario de atención</h3>
+                <h3 className=" text-gray-800">Horario de atención</h3>
                 <p className="text-gray-600">Lunes a Viernes: Solo con cita<br />Domingo: Cerrado</p>
               </div>
             </div>
@@ -47,7 +47,7 @@ export default function About() {
             <div className="flex items-start">
               <Phone className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
-                <h3 className="font-medium text-gray-800">Teléfono</h3>
+                <h3 className=" text-gray-800">Teléfono</h3>
                 <p className="text-gray-600">+52 33 3066 7246</p>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function About() {
             <div className="flex items-start">
               <Mail className="w-5 h-5 text-blue-600 mt-0.5 mr-3 flex-shrink-0" />
               <div>
-                <h3 className="font-medium text-gray-800">Correo electrónico</h3>
+                <h3 className=" text-gray-800">Correo electrónico</h3>
                 <p className="text-gray-600">psicoterapiageneroconsulta@gmail.com</p>
               </div>
             </div>

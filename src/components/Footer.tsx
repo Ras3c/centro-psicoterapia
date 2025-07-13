@@ -1,15 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaPhone, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
   const footerLinks = [
     { href: "/about", label: "Sobre Nosotros" },
     { href: "/services", label: "Servicios" },
-    { href: "/team", label: "Equipo" },
-    { href: "/blog", label: "Blog" },
-    { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "Contacto" },
-    { href: "/privacy", label: "Privacidad" },
     { href: "/terms", label: "Términos" },
   ];
 
@@ -27,7 +24,13 @@ export default function Footer() {
           
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Link href="/" className="text-2xl font-bold text-primary">
-              Terapia Plural
+               <Image
+                  src={'/images/logo_footer2.png'}
+                  alt={'Logo Footer'}
+                  width={200} 
+                  height={600}
+                  className="inline-block ml-2"
+                />
             </Link>
             
             <div className="flex space-x-4">
@@ -70,7 +73,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-6 border-t border-border text-center">
           <p className="text-text text-sm">
-            &copy; {new Date().getFullYear()} Terapia Plural. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} Acompañamiento en Dignidad. Todos los derechos reservados.
           </p>
         </div>
       </div>

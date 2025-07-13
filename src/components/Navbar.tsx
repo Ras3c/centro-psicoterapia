@@ -3,9 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { BiMenu, BiX } from "react-icons/bi";
-import { RiNextjsFill } from "react-icons/ri";
 import Image from "next/image";
-
 
 export default function Navbar() {
 
@@ -47,19 +45,20 @@ export default function Navbar() {
         ? "take-y-0" 
         : "-translate-y-full"
       }`}
+      style={{ backgroundColor: "#222651" }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#222651" }}>
         <div className="flex justify-between h-16">
           <div className="flex items-center"> 
             <Link href="/">
-              <Image src="/images/fondo_tras.png" alt="Logo" width={220} height={220} className="inline-block ml-2" />
+              <Image src="/images/logo_navbar.png" alt="Logo" width={220} height={220} className="inline-block ml-2" />
             </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}
-                className={`text-gray-600 hover:text-blue-900 px-3 py-2 rounded-md text-md font-semibold transition-colors ${
+                className={`text-white hover:text-blue-900 px-3 py-2 rounded-md text-md font-semibold transition-colors ${
                   pathname === link.href 
                     ? 'text-blue-600' 
                     : ''

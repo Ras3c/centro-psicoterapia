@@ -45,7 +45,7 @@ export default function Contact() {
       <form className="space-y-6 bg-white p-8 rounded-xl shadow-md">
         <div className="grid gap-6 md:grid-cols-2">
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700">Nombre completo*</label>
+            <label className="block text-sm  mb-1 text-gray-700">Nombre completo*</label>
             <input 
               type="text" 
               required
@@ -55,7 +55,7 @@ export default function Contact() {
           </div>
           
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700">Correo electrónico*</label>
+            <label className="block text-sm  mb-1 text-gray-700">Correo electrónico*</label>
             <input 
               type="email" 
               required
@@ -67,7 +67,7 @@ export default function Contact() {
 
         <div className="grid gap-6 md:grid-cols-2">
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700">Edad</label>
+            <label className="block text-sm  mb-1 text-gray-700">Edad</label>
             <input 
               type="number" 
               min="12"
@@ -78,7 +78,7 @@ export default function Contact() {
           </div>
           
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700">Ubicación</label>
+            <label className="block text-sm  mb-1 text-gray-700">Ubicación</label>
             <select className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
               <option value="online">Consulta online</option>
               <option value="">Selecciona tu estado</option>
@@ -92,7 +92,7 @@ export default function Contact() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1 text-gray-700">Motivo de consulta*</label>
+          <label className="block text-sm  mb-1 text-gray-700">Motivo de consulta*</label>
           <select 
             required
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -107,7 +107,7 @@ export default function Contact() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium mb-1 text-gray-700">Mensaje*</label>
+          <label className="block text-sm  mb-1 text-gray-700">Mensaje*</label>
           <textarea 
             required
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
