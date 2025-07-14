@@ -18,7 +18,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-background border-t border-border mt-16">
+    <footer className="w-full bg-gradient-to-r from-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           
@@ -62,7 +62,7 @@ export default function Footer() {
           <div className="flex items-center space-x-4">
             <Link href="tel:+523312345678" className="flex items-center text-text hover:text-accent transition-colors">
               <FaPhone className="h-4 w-4 mr-2" />
-              <span className="text-sm">+52 33 1234 5678</span>
+              <span className="text-sm">+52 33 3066 7246</span>
             </Link>
             <Link href="mailto:contacto@terapiaplural.com" className="flex items-center text-text hover:text-accent transition-colors">
               <FaEnvelope className="h-4 w-4 mr-2" />

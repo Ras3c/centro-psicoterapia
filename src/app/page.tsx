@@ -8,21 +8,23 @@ export default function Home() {
 
   return (
     <>
-      <section>
-        <main className="flex min-h-screen flex-col items-center justify-center py-2">
+      <section className=''>
+        <main className="flex min-h-screen flex-col items-center justify-center">
         <ImageSlider />
         </main>
       </section>
       
-      <section className='h-screen w-full'>
-        <ServicesSection/>
+      <section className='flex flex-col items-center justify-center'>
+                  <ServicesSection/>
+
       </section>
 
-      <section className='h-screen w-full'>
+      <section className='flex flex-col items-center justify-center'>
         <ConocenosSection/>
+
       </section>
       
-      <section className='h-screen w-full'>
+      <section className='flex flex-col items-center justify-center'>
         <ContactanosSection/>
       </section>
     </>

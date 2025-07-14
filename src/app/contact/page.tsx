@@ -36,7 +36,7 @@ export default function Contact() {
 
 
   return (
-    <section className="max-w-2xl mx-auto py-12 px-4">
+    <section className="max-w-2xl mx-auto py-24 px-4">
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold mb-2 text-title">Contáctanos</h1>
         <p className="text-gray-600">Completa el formulario y nos pondremos en contacto contigo</p>
