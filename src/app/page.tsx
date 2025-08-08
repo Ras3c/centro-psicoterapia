@@ -15,13 +15,11 @@ export default function Home() {
       </section>
       
       <section className='flex flex-col items-center justify-center'>
-                  <ServicesSection/>
-
+          <ServicesSection/>
       </section>
 
       <section className='flex flex-col items-center justify-center'>
         <ConocenosSection/>
-
       </section>
       
       <section className='flex flex-col items-center justify-center'>
