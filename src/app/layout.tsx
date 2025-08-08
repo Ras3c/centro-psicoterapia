@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import { montserrat } from "../styles/fonts";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import type { Metadata } from "next";
@@ -16,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className="min-h-screen flex flex-col font-sans">
+      <body className={`min-h-screen flex flex-col ${montserrat.className} antialiased`}>
         <Navbar />
         <main className="max-w-8xl mx-auto">{children}</main>
         <Footer />

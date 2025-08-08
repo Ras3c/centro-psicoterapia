@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone } from "lucide-react";
-import contactImage from "@/assets/images/contact-image.jpg"; // Replace with your actual image path
 
 export default function ContactanosSection() {
   return (

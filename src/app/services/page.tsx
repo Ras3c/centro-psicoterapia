@@ -1,4 +1,4 @@
-import { Heart, Users, AlertTriangle, CalendarCheck, Brain, Speech } from 'lucide-react';
+import { Heart, Users, AlertTriangle, CalendarCheck, Brain } from 'lucide-react';
 
 const services = [
   {
