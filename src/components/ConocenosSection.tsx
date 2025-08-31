@@ -8,7 +8,7 @@ export default function ConocenosSection() {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center text-white py-20">
       {/* Imagen de fondo con overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-indigo-900/70">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-indigo-900/70 hidden lg:block">
         <Image
           src="/images/conocenos.jpg"
           alt="Conocenos"
@@ -19,11 +19,24 @@ export default function ConocenosSection() {
         />
       </div>
 
+      {/* Imagen de fondo con overlay gradient para moviles*/}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 to-indigo-900/80 lg:hidden">
+        <Image
+          src="/images/conocenos_mobile.jpg"
+          alt="Conocenos"
+          fill
+          className="object-cover lg:hidden"
+          priority
+          quality={100}
+        />
+      </div>
+
+
       {/* Capa de contenido */}
       <div className="relative z-10 w-full max-w-7xl px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12">
         {/* Texto a la izquierda */}
         <div className="lg:w-2/3 text-center lg:text-left">
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-indigo-200 font-medium uppercase tracking-wider text-xs mb-6">
+          <div className="inline-flex items-center bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full text-white-200 font-medium uppercase tracking-wider text-xs mb-6">
             <Info className="w-4 h-4 mr-2"/>
             Conócenos
           </div>

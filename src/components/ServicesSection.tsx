@@ -84,15 +84,15 @@ const ServicesSection: FC = () => {
               <div className="relative z-10 min-h-[250px] md:min-h-[300px] flex flex-col justify-center p-8 md:p-12 text-white">
                 {/* Icon with decorative background */}
                 <div className="flex items-center mb-6">
-                  <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full mr-4">
+                  <div className="bg-black/25 backdrop-blur-sm p-3 rounded-full mr-4">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl md:text-2xl lg:text-4xl font-bold text-white bg-black/10 rounded-xl">
+                  <h3 className="text-xl md:text-2xl lg:text-4xl font-bold text-white bg-black/25 rounded-xl">
                     {service.text}
                   </h3>
                 </div>
 
-                <p className="text-white text-base md:text-lg bg-black/25 backdrop-blur-sm p-6 rounded-xl max-w-4xl">
+                <p className="text-white text-base md:text-lg bg-black/30 backdrop-blur-sm p-6 rounded-xl max-w-4xl">
                   {service.description}
                 </p>
 

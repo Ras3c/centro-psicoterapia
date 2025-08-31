@@ -1,20 +1,18 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaPhone, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   const footerLinks = [
     { href: "/about", label: "Sobre Nosotros" },
     { href: "/services", label: "Servicios" },
-    { href: "/contact", label: "Contacto" },
-    { href: "/terms", label: "Términos" },
   ];
 
   const socialLinks = [
     { icon: <FaFacebook className="h-5 w-5" />, href: "#", label: "Facebook" },
     { icon: <FaInstagram className="h-5 w-5" />, href: "#", label: "Instagram" },
-    { icon: <FaTwitter className="h-5 w-5" />, href: "#", label: "Twitter" },
-    { icon: <FaLinkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
+    // { icon: <FaLinkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
+    { icon: <FaWhatsapp className="h-5 w-5" />, href: "https://wa.me/5233306667246", label: "WhatsApp" },
   ];
 
   return (
@@ -60,11 +58,11 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center space-x-4">
-            <Link href="tel:+523312345678" className="flex items-center text-text hover:text-accent transition-colors">
+            <Link href="tel:+523335068342" className="flex items-center text-text hover:text-accent transition-colors">
               <FaPhone className="h-4 w-4 mr-2" />
-              <span className="text-sm">+52 33 3066 7246</span>
+              <span className="text-sm">+52 33 3506 8342</span>
             </Link>
-            <Link href="mailto:contacto@terapiaplural.com" className="flex items-center text-text hover:text-accent transition-colors">
+            <Link href="mailto:psicoterapia.genero.edu@gmail.com" className="flex items-center text-text hover:text-accent transition-colors">
               <FaEnvelope className="h-4 w-4 mr-2" />
               <span className="text-sm">Contacto</span>
             </Link>

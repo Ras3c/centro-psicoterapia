@@ -5,6 +5,11 @@ import { StaticImageData } from "next/image";
 import image1 from "@/assets/images/img_slider_1.jpg";
 import image2 from "@/assets/images/img_slider_2.jpg";
 import image3 from "@/assets/images/img_slider_3.jpg";
+import image4 from "@/assets/images/img_slider_4.jpg";
+import image_mobile_1 from "@/assets/images/img_slider_mobile_1.jpg";
+import image_mobile_2 from "@/assets/images/img_slider_mobile_2.jpg";
+import image_mobile_3 from "@/assets/images/img_slider_mobile_3.jpg";
+import image_mobile_4 from "@/assets/images/img_slider_mobile_4.jpg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { JSX } from "react/jsx-runtime";
 
@@ -12,16 +17,47 @@ interface ImageData {
   src: StaticImageData;
 }
 
-const images: ImageData[] = [
+const desktopImages: ImageData[] = [
   { src: image1 },
   { src: image2 },
   { src: image3 },
+  { src: image4 },
 ];
+
+const mobileImages: ImageData[] = [
+  { src: image_mobile_1 },
+  { src: image_mobile_2 },
+  { src: image_mobile_3 },
+  { src: image_mobile_4 },
+]
 
 export default function ImageSlider(): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  
+    useEffect(() => {
+      const checkIsMobile = (): boolean => {
+        return window.innerWidth <= 768; // Common breakpoint for mobile devices
+      };
+      const handleResize = (): void => {
+        setIsMobile(checkIsMobile());
+        // Reset index when switching between mobile/desktop to avoid out-of-bounds
+        setCurrentIndex(0);
+      };
 
+      // Initial check
+      setIsMobile(checkIsMobile());
+
+      // Add resize listener
+      window.addEventListener('resize', handleResize);
+      
+      // Cleanup
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+  const images = isMobile ? mobileImages : desktopImages;
+  
   const prevSlide = (): void => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
@@ -39,7 +75,7 @@ export default function ImageSlider(): JSX.Element {
       }, 3000);
       return () => clearInterval(interval);
     }
-  }, [isHovered]);
+  }, [isHovered, images.length]);
 
   const handleMouseOver = (): void => setIsHovered(true);
   const handleMouseLeave = (): void => setIsHovered(false);

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactanosSection() {
   return (
@@ -20,10 +20,10 @@ export default function ContactanosSection() {
             </p>
 
             <div className="pt-4">
-              <Link href="/contact">
-                <button className="group relative inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden">
+              <Link href="https://wa.me/523335068342" target="_blank" rel="noopener noreferrer">
+                <button className="group relative inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl overflow-hidden cursor-pointer">
                   <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                  <Phone className="w-5 h-5 mr-3 z-10" />
+                  <FaWhatsapp className="w-5 h-5 mr-3 z-10" />
                   <span className="z-10">Contáctanos</span>
                   <span className="absolute inset-0 border-2 border-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 </button>

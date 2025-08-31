@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { BiMenu, BiX } from "react-icons/bi";
+import { FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -36,7 +37,6 @@ export default function Navbar() {
     { href: "/", label: "Inicio" },
     { href: "/about", label: "Sobre Nosotros" },
     { href: "/services", label: "Servicios" },
-    { href: "/contact", label: "Contacto" }
   ];
 
   return (
@@ -67,6 +67,12 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            {/* add whatsapp button */}
+            <Link href="https://wa.me/523335068342" target="_blank" rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-md font-semibold transition-colors"
+            >
+              WhatsApp <FaWhatsapp className="inline-block ml-2"/>
+            </Link>
           </div>
 
           <div className="md:hidden flex items-center">
@@ -104,6 +110,11 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link href="https://wa.me/523335068342" target="_blank" rel="noopener noreferrer"
+              className="block w-full text-center bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md text-md font-semibold transition-colors"
+            >
+              WhatsApp <FaWhatsapp className="inline-block ml-2"/>
+            </Link>
           </div>
         </div>
 
