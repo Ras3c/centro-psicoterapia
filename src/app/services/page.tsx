@@ -20,7 +20,7 @@ const services = [
     icon: <Users className="w-6 h-6 text-blue-600" />
   },
   {
-    title: "Acompañamiento psicoterapéutico para vinculaciones erotico-afectivas",
+    title: "Acompañamiento psicoterapéutico para vinculaciones dentro del espectro de la disidencia sexual y de género y de vinculaciones no monogámicas éticas.",
     description: (
       <>
         Este servicio está diseñado para quienes exploran sus <b>vínculos erótico-afectivos</b> desde la <b>disidencia sexual y de género</b> y las <b>relaciones no monógamas éticas</b>. Ofrezco un espacio para que puedas navegar los desafíos únicos de estas dinámicas. El objetivo es acompañarte a fortalecer la comunicación, gestionar emociones como los celos y establecer acuerdos claros, para que vivas tus relaciones de una manera auténtica, responsable y plena. Aquí, tu forma de amar es valorada y respetada, y el trabajo se centra en tu bienestar emocional y en el crecimiento de tus vínculos.
