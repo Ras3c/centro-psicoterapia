@@ -9,7 +9,7 @@ export default function About() {
       <div className="text-center mb-10 sm:mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Sobre Nosotros</h1>
         <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto p-2.5">
-          Centro especializado en psicoterapia con enfoque de género y sexualidad humana
+          Centro especializado en psicoterapia con enfoque de género y educación antipatriarcal en sexualidad humana
         </p>
       </div>
 
@@ -85,7 +85,7 @@ export default function About() {
               <a href="tel:+523335068342" className="text-blue-600 text-sm sm:text-base block mt-1 hover:underline">
                 +52 33 3506 8342
               </a>
-               <a href="tel:+523330667246" className="text-blue-600 text-sm sm:text-base block mt-1 hover:underline">
+              <a href="tel:+523330667246" className="text-blue-600 text-sm sm:text-base block mt-1 hover:underline">
                 +52 33 3066 7246
               </a>
             </div>

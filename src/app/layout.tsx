@@ -10,16 +10,16 @@ export const metadata: Metadata = {
   description: "Sitio web informativo del centro de psicoterapia",
 };
 
-export default function RootLayout({ 
-  children, 
-}: { 
+export default function RootLayout({
+  children,
+}: {
   children: ReactNode;
 }) {
   return (
     <html lang="es">
       <body className={`min-h-screen flex flex-col ${montserrat.className} antialiased`}>
         <Navbar />
-        <main className="max-w-8xl mx-auto">{children}</main>
+        <main className="mx-auto">{children}</main>
         <Footer />
       </body>
     </html>

@@ -41,10 +41,10 @@ export default function ConocenosSection() {
             Conócenos
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-12 leading-tight">
-            Psicología con <span className="titulo">perspectiva de Genero</span>
+            Psicoterapia con <span className="titulo">perspectiva de Genero</span>
           </h2>
-          <p className="text-lg sm:text-xl text-white bg-black/30 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-2xl mx-auto lg:mx-0">
-            Centro de psicoterapia con enfoque contextual-conductual, antipatriarcal y con perspectiva de género. Ofrecemos acompañamiento terapéutico individual, de pareja y a vínculos diversos; educación sexual integral; y procesos psico-organizacionales, con especial atención a las masculinidades, las disidencias sexuales y la prevención de la violencia de género. Atención presencial en Guadalajara y en línea.
+          <p className="text-lg sm:text-xl text-white bg-black/25 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-2xl mx-auto lg:mx-0">
+            Somos un centro de psicoterapia especializado en acompañamiento psicoterapéutico con enfoque antipatriarcal y de género. Ofrecemos terapia individual, de pareja y para vínculos diversos, además de educación sexual integral y procesos psico-organizacionales. Nos especializamos en trabajar con masculinidades, disidencias sexuales y en la prevención de la violencia de género. Brindamos nuestros servicios de forma presencial en Guadalajara y en línea para personas de otros estados de la republica o fuera de México.
           </p>
         </div>
 

@@ -14,10 +14,19 @@
   --color-accent-alt: #d9aea8;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .servicios-title{

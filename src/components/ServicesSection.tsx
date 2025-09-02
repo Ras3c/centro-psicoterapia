@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { FC } from "react";
-import { User, Users, Building2, VenusAndMars } from "lucide-react";
+import { User, Users, Building2, NonBinary, VenusAndMars } from "lucide-react";
 import { StaticImageData } from "next/image";
-import img_serv_1 from "@/assets/images/terapia_individual.jpg";
-import img_serv_2 from "@/assets/images/terapia_pareja.jpg";
-import img_serv_3 from "@/assets/images/taller.jpg";
-import img_serv_4 from "@/assets/images/educacion.jpg";
+import img_terapia_individual from "@/assets/images/terapia_individual.jpg";
+import img_terapia_pareja from "@/assets/images/terapia_pareja.jpg";
+import img_otras_formas from "@/assets/images/otras_formas.jpg";
+import img_organizaciones from "@/assets/images/taller.jpg";
+import img_educacion from "@/assets/images/educacion.jpg";
 import { JSX } from "react/jsx-runtime";
 
 type ServiceItem = {
@@ -21,30 +22,37 @@ const services: ServiceItem[] = [
   {
     text: "Terapia individual",
     description:
-      "Acompañamiento terapéutico desde una perspectiva contextual-conductual y antipatriarcal, orientado a hombres, mujeres y personas en disidencias sexuales de género que buscan herramientas para el bienestar emocional y el crecimiento personal.",
+      "Nuestro Modelo está diseñado para acompañar a hombres, mujeres y personas en disidencias sexuales y de género que buscan un espacio seguro para reflexinar sobre su bienerstar emocional, impulsar su crecimiento personal y encontrar caminos hacia la libertad. Utilizamos una prespectiva basada en derechos humanos, estudios de género y una vision antipatriarcal.",
     icon: <User className="w-8 h-8" />,
-    background: img_serv_1,
+    background: img_terapia_individual,
   },
   {
-    text: "Terapia de pareja y otras formas de vinculaciones no monogámicas y personas en disidencias sexuales de género",
+    text: "Terapia de pareja",
     description:
-      "Espacio terapéutico inclusivo para trabajar la comunicación, los acuerdos y los conflictos en relaciones sexo-afectivas diversas, con enfoque en género, vínculos éticos y respeto a las identidades no normativas.",
+      "Espacio de acompañamiento psicoterapéutico inclusivo para trabajar la comunicación, los acuerdos y los conflictos en relaciones sexo-afectivas, con enfoque en género y vínculos éticos e igualitarios.",
     icon: <Users className="w-8 h-8" />,
-    background: img_serv_2,
+    background: img_terapia_pareja,
+  },
+    {
+    text: "Acompañamiento en vinculaciones no monogámicas y personas en disidencia sexual y de género",
+    description:
+      "Brindamos acompañamiento a personas que exploran formas de vinculación no monógamas. También, creamos un espacio seguro para quienes se identifican como parte de la disidencia sexual y de género, siempre guiados por principios éticos y de respeto mutuo.",
+    icon: <NonBinary className="w-8 h-8" />,
+    background: img_otras_formas,
   },
   {
-    text: "Acompañamiento psico-organizacional para empresas y organizaciones",
+    text: "Acompañamiento psico-organizacional para empresas, instituciones y organizaciones",
     description:
-      "Procesos de formación y acompañamiento enfocados en salud mental, prevención de violencia de género y transformación de prácticas organizacionales desde una perspectiva crítica de las masculinidades.",
+      "Nuestro servicio de acompañamiento psico-organizacional se enfoca en el bienestar de las personas dentro del entorno laboral y en  la prevención de la violencia de género al interior  de la organización. Ofrecemos herramientas y estrategias que van más allá de la gestión tradicional, abordando las dinámicas humanas y emocionales que influyen directamente en la productividad, la motivación y el clima laboral.",
     icon: <Building2 className="w-8 h-8" />,
-    background: img_serv_3,
+    background: img_organizaciones,
   },
   {
-    text: "Acompañamiento en sexualidades con perspectiva de género",
+    text: "Acompañamiento en educación de las sexualidades humanas con perspectiva de género",
     description:
-      "Educación y exploración sexual en un entorno respetuoso y libre de prejuicios, dirigido a personas de todas las identidades, con enfoque en diversidad, placer, vínculos y derechos sexuales.",
+      "Educación y autoconocimiento de la sexualidades humanas en un entorno respetuoso y libre de prejuicios patriarcales, dirigido a personas de todas las identidades, con enfoque en diversidad, placer, vínculos, derechos sexuales y reproductivos.",
     icon: <VenusAndMars className="w-8 h-8" />,
-    background: img_serv_4,
+    background: img_educacion,
   },
 ];
 
@@ -58,7 +66,7 @@ const ServicesSection: FC = () => {
             ¿Qué servicios ofrecemos?
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Soluciones psicológicas personalizadas para cada necesidad
+            Soluciones en acompañamiento psicoterapéutico personalizado para cada necesidad.
           </p>
         </div>
 
@@ -84,15 +92,15 @@ const ServicesSection: FC = () => {
               <div className="relative z-10 min-h-[250px] md:min-h-[300px] flex flex-col justify-center p-8 md:p-12 text-white">
                 {/* Icon with decorative background */}
                 <div className="flex items-center mb-6">
-                  <div className="bg-black/25 backdrop-blur-sm p-3 rounded-full mr-4">
+                  <div className="bg-black/20 backdrop-blur-sm p-3 rounded-full mr-4">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl md:text-2xl lg:text-4xl font-bold text-white bg-black/25 rounded-xl">
+                  <h3 className="text-xl md:text-2xl lg:text-4xl font-bold text-white p-2 bg-black/20 rounded-xl">
                     {service.text}
                   </h3>
                 </div>
 
-                <p className="text-white text-base md:text-lg bg-black/30 backdrop-blur-sm p-6 rounded-xl max-w-4xl">
+                <p className="text-white text-base md:text-lg bg-black/25 backdrop-blur-sm p-4 rounded-xl max-w-5xl">
                   {service.description}
                 </p>
 
