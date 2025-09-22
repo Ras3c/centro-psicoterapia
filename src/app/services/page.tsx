@@ -1,5 +1,4 @@
 import { Heart, Users, UserRoundPen, CalendarCheck, Brain, Speech, VenusAndMars, BookOpen, GraduationCap } from 'lucide-react';
-import tallerCoca from "@/assets/images/taller_coca.jpg";
 import terapiaIndividual from "@/assets/images/terapia_individual.jpg";
 import terapiaPareja from "@/assets/images/terapia_pareja.jpg";
 import otrasFormas from "@/assets/images/otras_formas.jpg";
