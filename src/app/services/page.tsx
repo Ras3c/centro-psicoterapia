@@ -1,4 +1,14 @@
 import { Heart, Users, UserRoundPen, CalendarCheck, Brain, Speech, VenusAndMars, BookOpen, GraduationCap } from 'lucide-react';
+import tallerCoca from "@/assets/images/taller_coca.jpg";
+import terapiaIndividual from "@/assets/images/terapia_individual.jpg";
+import terapiaPareja from "@/assets/images/terapia_pareja.jpg";
+import otrasFormas from "@/assets/images/otras_formas.jpg";
+import terapiaGrupal from "@/assets/images/terapia_grupal.jpg";
+import conferencia from "@/assets/images/conferencia.jpg";
+import masculinidad from "@/assets/images/masculinidad.jpg";
+import educacion from "@/assets/images/educacion_2.jpg";
+import genero from "@/assets/images/genero.jpg";
+import Image from 'next/image';
 
 const services = [
   {
@@ -8,7 +18,8 @@ const services = [
         La psicoterapia con <b>perspectiva de género</b> y <b>enfoque antipatriarcal</b> se construye sobre una base teórica que reconoce y cuestiona las estructuras de poder que han normalizado la desigualdad de género en nuestra sociedad. Este enfoque terapéutico parte del reconocimiento de que el sistema patriarcal ha generado patrones de comportamiento, pensamiento y relación que afectan profundamente el bienestar emocional de todas las personas, independientemente de su género.
       </>
     ),
-    icon: <UserRoundPen className="w-6 h-6 text-blue-600" />
+    icon: <UserRoundPen className="w-6 h-6 text-blue-600" />,
+    image: terapiaIndividual
   },
   {
     title: "Acompañamiento psicoterapéutico para parejas",
@@ -17,7 +28,8 @@ const services = [
         Nuestro enfoque terapéutico se caracteriza por una metodología flexible que se adapta a las necesidades específicas de cada pareja, manteniendo siempre como eje central la <b>perspectiva antipatriarcal</b> y los <b>estudios de género</b>. El proceso terapéutico se desarrolla en un ambiente de respeto, horizontalidad y colaboración, donde las personas consultantes son reconocidas como expertas en su propia experiencia y con el potencial de construir un modelo de pareja que les haga sentido a sus vidas.
       </>
     ),
-    icon: <Users className="w-6 h-6 text-blue-600" />
+    icon: <Users className="w-6 h-6 text-blue-600" />,
+    image: terapiaPareja
   },
   {
     title: "Acompañamiento psicoterapéutico para vinculaciones dentro del espectro de la disidencia sexual y de género y de vinculaciones no monogámicas éticas.",
@@ -26,7 +38,9 @@ const services = [
         Este servicio está diseñado para quienes exploran sus <b>vínculos erótico-afectivos</b> desde la <b>disidencia sexual y de género</b> y las <b>relaciones no monógamas éticas</b>. Ofrezco un espacio para que puedas navegar los desafíos únicos de estas dinámicas. El objetivo es acompañarte a fortalecer la comunicación, gestionar emociones como los celos y establecer acuerdos claros, para que vivas tus relaciones de una manera auténtica, responsable y plena. Aquí, tu forma de amar es valorada y respetada, y el trabajo se centra en tu bienestar emocional y en el crecimiento de tus vínculos.
       </>
     ),
-    icon: <VenusAndMars className="w-6 h-6 text-blue-600" />
+    icon: <VenusAndMars className="w-6 h-6 text-blue-600" />,
+    image: otrasFormas
+
   },
   {
     title: "Cursos, talleres, conferencias y diagnósticos",
@@ -35,7 +49,8 @@ const services = [
         Ofrecemos una amplia gama de servicios formativos especializados en <b>masculinidades</b>, <b>prevención de violencia de género</b> y <b>perspectiva de género</b> para entornos laborales. Nuestros cursos, talleres, conferencias y diagnósticos están diseñados específicamente para empresas, instituciones y organizaciones que buscan crear espacios más equitativos, seguros y conscientes. A través de metodologías participativas y contenidos actualizados, proporcionamos las herramientas necesarias para transformar culturas organizacionales y promover relaciones laborales más saludables.
       </>
     ),
-    icon: <CalendarCheck className="w-6 h-6 text-blue-600" />
+    icon: <CalendarCheck className="w-6 h-6 text-blue-600" />,
+    image: conferencia
   },
   {
     title: "Acompañamiento en educación de la sexualidad",
@@ -44,7 +59,8 @@ const services = [
         Exploración de la sexualidad más allá de los mandatos <b>heteronormativos</b>, promoviendo el <b>autoconocimiento</b>, el <b>consentimiento</b>, el <b>placer</b> y la <b>autonomía</b>.
       </>
     ),
-    icon: <Heart className="w-6 h-6 text-blue-600" />
+    icon: <Heart className="w-6 h-6 text-blue-600" />,
+    image: educacion
   },
   {
     title: "Terapia Grupal",
@@ -53,7 +69,8 @@ const services = [
         Espacios colectivos que permiten compartir experiencias, aprender de otros/as/es y construir <b>redes de apoyo</b>. Pueden organizarse en torno a temáticas específicas (como <b>masculinidades</b>, <b>violencias</b>, <b>sexualidad</b>, etc.) o como grupos de crecimiento personal con perspectiva de género.
       </>
     ),
-    icon: <Speech className="w-6 h-6 text-blue-600" />
+    icon: <Speech className="w-6 h-6 text-blue-600" />,
+    image: terapiaGrupal
   },
   {
     title: "Acompañamiento para Personas en Disidencias Sexuales y de Género",
@@ -62,7 +79,8 @@ const services = [
         El acompañamiento psicoterapéutico para personas en <b>disidencias sexuales y de género</b> desde una <b>perspectiva antipatriarcal</b> reconoce y valida la diversidad de identidades, expresiones y orientaciones que existen más allá del sistema binario y heteronormativo. Este espacio terapéutico está diseñado para acompañar procesos de <b>autoconocimiento</b>, <b>afirmación</b> y <b>bienestar emocional</b> en un contexto que respeta y celebra la diversidad.
       </>
     ),
-    icon: <VenusAndMars className="w-6 h-6 text-blue-600" />
+    icon: <VenusAndMars className="w-6 h-6 text-blue-600" />,
+    image: genero
   },
   {
     title: "Acompañamiento psicoterapéutico en masculinidades",
@@ -71,7 +89,8 @@ const services = [
         El trabajo psicoterapéutico con hombres desde una <b>perspectiva antipatriarcal</b> ofrece un espacio único para explorar y cuestionar las <b>masculinidades hegemónicas</b> que han limitado su desarrollo emocional pleno. Este proceso permite a los hombres reconocer cómo la <b>socialización masculina tradicional</b> ha restringido su capacidad para conectar con sus emociones, establecer vínculos íntimos significativos y desarrollar una identidad auténtica más allá de los mandatos de la masculinidad tradicional.
       </>
     ),
-    icon: <Brain className="w-6 h-6 text-blue-600" />
+    icon: <Brain className="w-6 h-6 text-blue-600" />,
+    image: masculinidad
   },
 ];
 
@@ -113,8 +132,20 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="p-6 border rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 bg-white group border-gray-100"
+              className="p-6 border rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 bg-white group border-gray-100 overflow-hidden"
             >
+              {service.image && (
+                <div className="relative h-48 w-full mb-4 rounded-lg overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              )}
+              
               <div className="flex items-start mb-4">
                 <div className="p-3 mr-4 rounded-xl bg-blue-50 group-hover:bg-blue-100 transition-colors flex-shrink-0">
                   {service.icon}

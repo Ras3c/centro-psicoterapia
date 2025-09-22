@@ -9,8 +9,8 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: <FaFacebook className="h-5 w-5" />, href: "#", label: "Facebook" },
-    { icon: <FaInstagram className="h-5 w-5" />, href: "#", label: "Instagram" },
+    { icon: <FaFacebook className="h-5 w-5" />, href: "https://www.facebook.com/Centredepsicoterapiabasadaenestudiosdegenero/", label: "Facebook" },
+    { icon: <FaInstagram className="h-5 w-5" />, href: "https://www.instagram.com/psico_terapia.centro/", label: "Instagram" },
     // { icon: <FaLinkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
     { icon: <FaWhatsapp className="h-5 w-5" />, href: "https://wa.me/5233306667246", label: "WhatsApp" },
   ];
@@ -22,13 +22,13 @@ export default function Footer() {
           
           <div className="flex flex-col md:flex-row items-center gap-6">
             <Link href="/" className="text-2xl font-bold text-primary">
-               <Image
-                  src={'/images/logo_footer2.png'}
-                  alt={'Logo Footer'}
-                  width={200} 
-                  height={600}
-                  className="inline-block ml-2"
-                />
+              <Image
+                src={'/images/logo_footer2.png'}
+                alt={'Logo Footer'}
+                width={200} 
+                height={600}
+                className="inline-block ml-2"
+              />
             </Link>
             
             <div className="flex space-x-4">
@@ -37,6 +37,8 @@ export default function Footer() {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-text hover:text-accent transition-colors"
                 >
                   {social.icon}

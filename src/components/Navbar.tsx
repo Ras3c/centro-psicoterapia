@@ -49,7 +49,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ backgroundColor: "#222651" }}>
         <div className="flex justify-between h-16">
-          <div className="flex items-center"> 
+          <div className="flex items-center">
             <Link href="/">
               <Image src="/images/logo_navbar.png" alt="Logo" width={220} height={220} className="inline-block ml-2" />
             </Link>
@@ -59,8 +59,8 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}
                 className={`text-white hover:text-blue-900 px-3 py-2 rounded-md text-md font-semibold transition-colors ${
-                  pathname === link.href 
-                    ? 'text-blue-600' 
+                  pathname === link.href
+                    ? 'text-blue-600'
                     : ''
                   }`}
                 >
@@ -83,15 +83,15 @@ export default function Navbar() {
               {!ismobileMenuOpen ? (
                 <BiMenu className="text-3xl"/>
               ) : (
-                <BiX className="text-3xl" />  
+                <BiX className="text-3xl" />
               )}
             </button>
           </div>
         </div>
 
         <div className={`md:hidden transition-transform duration-300 ease-in-out ${
-          ismobileMenuOpen 
-            ? "max-h-64 opacity-100" 
+          ismobileMenuOpen
+            ? "max-h-64 opacity-100"
             : "max-h-0 opacity-0 overflow-hidden"
           }`}
         >
@@ -102,9 +102,9 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  pathname === link.href 
-                    ? 'text-blue-600 bg-blue-50' 
-                    : 'text-gray-600 hover:text-blue-900 hover:bg-gray-50' 
+                  pathname === link.href
+                    ? 'text-blue-600 bg-blue-50'
+                    : 'text-gray-600 hover:text-blue-900 hover:bg-gray-50'
                   }`}
               >
                 {link.label}
