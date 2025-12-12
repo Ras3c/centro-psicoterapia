@@ -207,12 +207,13 @@ const diplomadosData: DiplomadosData = {
 };
 
 interface PageProps {
-    params: {
+    params: Promise<{
         id: string;
-    };
+    }>;
 }
 
-export default function DiplomadoPage({ params }: PageProps) {
+export default async function DiplomadoPage(props: PageProps) {
+    const params = await props.params;
     const diplomado = diplomadosData[params.id];
 
     if (!diplomado) {
@@ -382,7 +383,8 @@ export default function DiplomadoPage({ params }: PageProps) {
 }
 
 // Generar metadata dinámica para SEO
-export async function generateMetadata({ params }: PageProps) {
+export async function generateMetadata(props: PageProps) {
+    const params = await props.params;
     const diplomado = diplomadosData[params.id];
 
     if (!diplomado) {
