@@ -8,6 +8,7 @@ import masculinidad from "@/assets/images/masculinidad.jpg";
 import educacion from "@/assets/images/educacion_2.jpg";
 import genero from "@/assets/images/genero.jpg";
 import Image from 'next/image';
+import Link from "next/link";
 
 const services = [
   {
@@ -95,18 +96,18 @@ const services = [
 
 const educationalServices = [
   {
+    id: "psicoterapia-genero",
     title: "Diplomado en psicoterapia basada en estudios de género",
-    description: "",
     icon: <BookOpen className="w-6 h-6 text-purple-600" />
   },
   {
+    id: "diversidades-sexuales",
     title: "Diplomado en acompañamiento en las diversidades y disidencias sexuales y de género",
-    description: "",
     icon: <GraduationCap className="w-6 h-6 text-purple-600" />
   },
   {
+    id: "vinculaciones-afectivas",
     title: "Diplomado en acompañamiento de las vinculaciones románticas, afectivas y eróticas",
-    description: "",
     icon: <Heart className="w-6 h-6 text-purple-600" />
   },
 ];
@@ -173,21 +174,20 @@ export default function Services() {
               key={index}
               className="p-6 border rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 bg-white group border-gray-100 flex flex-col"
             >
-              <div className="p-3 rounded-xl bg-purple-50 group-hover:bg-purple-100 transition-colors mb-4 self-start">
-                {service.icon}
-              </div>
-              <h2 className="text-xl font-bold text-gray-800 group-hover:text-purple-700 transition-colors mb-3">
-                {service.title}
-              </h2>
-              <p className="text-gray-600 text-justify leading-relaxed flex-grow">
-                {service.description}
-              </p>
-              <button className="mt-4 text-purple-600 font-medium hover:text-purple-800 transition-colors text-sm self-start flex items-center cursor-pointer">
-                Más información
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </button>
+              <Link href={`/diplomados/${service.id}`} className="group relative overflow-hidden">
+                <div className="p-3 rounded-xl bg-purple-50 group-hover:bg-purple-100 transition-colors mb-4 self-start">
+                  {service.icon}
+                </div>
+                <h2 className="text-xl font-bold text-gray-800 group-hover:text-purple-700 transition-colors mb-3">
+                  {service.title}
+                </h2>
+                <button className="mt-4 text-purple-600 font-medium hover:text-purple-800 transition-colors text-sm self-start flex items-center cursor-pointer">
+                  Más información
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+              </Link>
             </div>
           ))}
         </div>
