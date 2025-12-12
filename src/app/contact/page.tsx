@@ -46,21 +46,21 @@ export default function Contact() {
         <div className="grid gap-6 md:grid-cols-2">
           <div>
             <label className="block text-sm  mb-1 text-gray-700">Nombre completo*</label>
-            <input 
-              type="text" 
+            <input
+              type="text"
               required
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
-              placeholder="Tu nombre" 
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="Tu nombre"
             />
           </div>
           
           <div>
             <label className="block text-sm  mb-1 text-gray-700">Correo electrónico*</label>
-            <input 
-              type="email" 
+            <input
+              type="email"
               required
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
-              placeholder="tu@correo.com" 
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="tu@correo.com"
             />
           </div>
         </div>
@@ -68,12 +68,12 @@ export default function Contact() {
         <div className="grid gap-6 md:grid-cols-2">
           <div>
             <label className="block text-sm  mb-1 text-gray-700">Edad</label>
-            <input 
-              type="number" 
+            <input
+              type="number"
               min="12"
               max="99"
-              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
-              placeholder="Tu edad" 
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="Tu edad"
             />
           </div>
           
@@ -93,7 +93,7 @@ export default function Contact() {
 
         <div>
           <label className="block text-sm  mb-1 text-gray-700">Motivo de consulta*</label>
-          <select 
+          <select
             required
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
@@ -108,10 +108,10 @@ export default function Contact() {
 
         <div>
           <label className="block text-sm  mb-1 text-gray-700">Mensaje*</label>
-          <textarea 
+          <textarea
             required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" 
-            rows={5} 
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            rows={5}
             placeholder="Describe brevemente tu situación o consulta..."
           ></textarea>
         </div>
@@ -119,10 +119,10 @@ export default function Contact() {
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="flex items-center h-5">
-              <input 
-                id="newsletter" 
-                type="checkbox" 
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" 
+              <input
+                id="newsletter"
+                type="checkbox"
+                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
               />
             </div>
             <label htmlFor="newsletter" className="ml-3 text-sm text-gray-700">
@@ -132,9 +132,9 @@ export default function Contact() {
 
           <div className="flex items-start">
             <div className="flex items-center h-5">
-              <input 
-                id="terms" 
-                type="checkbox" 
+              <input
+                id="terms"
+                type="checkbox"
                 required
                 className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" 
               />
@@ -145,8 +145,8 @@ export default function Contact() {
           </div>
         </div>
 
-        <button 
-          type="submit" 
+        <button
+          type="submit"
           className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors shadow-sm"
         >
           Enviar mensaje

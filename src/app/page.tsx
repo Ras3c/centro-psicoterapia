@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <section>
         <main className="flex min-h-screen flex-col items-center justify-center">
-        <ImageSlider />
+          <ImageSlider />
         </main>
       </section>
       

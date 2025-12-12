@@ -41,8 +41,8 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed w-full bg-white shadow-md transition-transform duration-300 z-50 ${
-      isVisible 
-        ? "take-y-0" 
+      isVisible
+        ? "take-y-0"
         : "-translate-y-full"
       }`}
       style={{ backgroundColor: "#222651" }}
@@ -51,14 +51,14 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/">
-              <Image src="/images/logo_navbar.png" alt="Logo" width={220} height={220} className="inline-block ml-2" />
+              <Image src="/images/logo_navbar.png" alt="Logo" width={250} height={220} className="inline-block ml-2 p-6 pb-7" />
             </Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}
-                className={`text-white hover:text-blue-900 px-3 py-2 rounded-md text-md font-semibold transition-colors ${
+                className={`text-white hover:text-blue-400 px-3 py-2 rounded-md text-md font-semibold transition-colors ${
                   pathname === link.href
                     ? 'text-blue-600'
                     : ''
