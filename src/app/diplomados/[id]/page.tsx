@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 import Link from "next/link";
-import { BookOpen, GraduationCap, Heart, Clock, Calendar, Users, DollarSign, FileText, Target, CheckCircle, AlertCircle, ChevronRight, ArrowLeft, Mail, Phone, MapPin, Download
-} from "lucide-react";
+import { BookOpen, GraduationCap, Heart, Clock, Calendar, Users, DollarSign, FileText, CheckCircle, AlertCircle, ChevronRight, ArrowLeft, Phone} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 
