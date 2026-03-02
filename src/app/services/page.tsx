@@ -10,6 +10,7 @@ import educacion from "@/assets/images/educacion_2.jpg";
 import genero from "@/assets/images/genero.jpg";
 import Image from 'next/image';
 import Link from "next/link";
+import { truncate } from 'fs/promises';
 
 const services = [
   {
@@ -104,9 +105,9 @@ const educationalServices = [
   },
   {
     id: "diversidades-sexuales",
-    title: "Diplomado en acompañamiento en las diversidades y disidencias sexuales y de género",
+    title: "Diplomado en acompañamiento clínico de las diversidades sexuales y de género.",
     icon: <GraduationCap className="w-6 h-6 text-purple-600" />,
-    activo: false
+    activo: true
   },
   {
     id: "vinculaciones-afectivas",
@@ -215,8 +216,8 @@ export default function Services() {
                   <div className="flex items-center text-xs text-gray-500">
                     <Clock className="w-3 h-3 mr-1.5 flex-shrink-0 text-purple-500" />
                     <span>
-                      {service.id === "psicoterapia-genero"
-                        ? "8 meses"
+                      {service.activo === true
+                        ? service.id === 'diversidades-sexuales' ? "3 meses" : "8 meses"
                         : "Por definir"
                       }
                     </span>
@@ -224,13 +225,13 @@ export default function Services() {
                   <div className="flex items-center text-xs text-gray-500">
                     <Calendar className="w-3 h-3 mr-1.5 flex-shrink-0 text-blue-500" />
                     <span>
-                      {service.id === "psicoterapia-genero"
+                      {service.activo === true
                         ? "Híbrida"
                         : "Por definir"
                       }
                     </span>
                   </div>
-                  {service.id === "psicoterapia-genero" && (
+                  {service.activo === true && (
                     <>
                       <div className="sm:col-span-2 flex items-center text-xs text-gray-500 mt-1">
                         <Users className="w-3 h-3 mr-1.5 flex-shrink-0 text-green-500" />
