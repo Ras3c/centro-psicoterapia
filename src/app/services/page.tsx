@@ -10,7 +10,6 @@ import educacion from "@/assets/images/educacion_2.jpg";
 import genero from "@/assets/images/genero.jpg";
 import Image from 'next/image';
 import Link from "next/link";
-import { truncate } from 'fs/promises';
 
 const services = [
   {
