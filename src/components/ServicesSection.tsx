@@ -22,7 +22,7 @@ const services: ServiceItem[] = [
   {
     text: "Terapia individual",
     description:
-      "Nuestro Modelo está diseñado para acompañar a hombres, mujeres y personas en disidencias sexuales y de género que buscan un espacio seguro para reflexinar sobre su bienerstar emocional, impulsar su crecimiento personal y encontrar caminos hacia la libertad. Utilizamos una prespectiva basada en derechos humanos, estudios de género y una vision antipatriarcal.",
+      "Nuestro Modelo está diseñado para acompañar a personas de  identidades cisgénero, heterosexuales y disidencias sexogenéricas que buscan un espacio de seguridad política y afectiva para reflexionar sobre su bienestar emocional. Reconocemos que tanto quienes habitan la norma como quienes transitan las disidencias requieren herramientas para impulsar su crecimiento personal y encontrar rutas hacia la autonomía. Nuestra labor se fundamenta en los derechos humanos, los estudios de género y una implicación ética radicalmente antipatriarcal.",
     icon: <User className="w-8 h-8" />,
     background: img_terapia_individual,
   },
