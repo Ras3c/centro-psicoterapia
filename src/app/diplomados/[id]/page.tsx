@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { BookOpen, GraduationCap, Heart, Clock, Calendar, Users, DollarSign, FileText, CheckCircle, AlertCircle, ChevronRight, ArrowLeft, Phone} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -58,8 +59,8 @@ const diplomadosData: DiplomadosData = {
                 A través de un enfoque crítico, esta formación profundiza en el análisis
                 de la socialización de género, la interseccionalidad y las estructuras
                 de poder que atraviesan la subjetividad, para promover intervenciones
-                terapéuticas que no solo reparen el malestar individual, sino que
-                también contribuyan al empoderamiento y la justicia social. Se abordan
+                terapéuticas que no solo intentan resignificar el malestar individual, sino que
+                también contribuyan a la autonomia y la justicia social. Se abordan
                 temas clave como la violencia de género, el trauma, los mandatos y
                 sesgos tradicionales del género y la deconstrucción de estigmas
                 sociales, con el objetivo de formar profesionales capaces de generar
@@ -183,16 +184,16 @@ const diplomadosData: DiplomadosData = {
         ],
     },
     "diversidades-sexuales": {
-        activo: false,
+        activo: true,
         title:
-            "Introducción al Diplomado en Acompañamiento en las Diversidades y Disidencias Sexuales y de Género.",
+            "Diplomado en Acompañamiento Clínico de las Diversidades Sexuales y de Género.",
         titlePlain:
-            "Introducción al Diplomado en Acompañamiento en las Diversidades y Disidencias Sexuales y de Género.",
+            "Diplomado en Acompañamiento Clínico de las Diversidades Sexuales y de Género.",
         simpleTitle:
-            "Diplomado en acompañamiento en las diversidades y disidencias sexuales y de género.",
+            "Diplomado en acompañamiento clínico de las diversidades sexuales y de género.",
         description: (
             <>
-                En un contexto social que demanda cada vez más comprensión, respeto y acción frente a las diversidades y disidencias sexuales y de género, este diplomado se presenta como una oportunidad formativa esencial para terapeutas, psicólogas y psicólogos comprometidos con una práctica profesional inclusiva y transformadora. Desde una sólida base en teorías feministas y con perspectiva de género, esta formación especializada ofrece herramientas conceptuales y metodológicas para acompañar de manera ética, crítica y sensible a personas y comunidades diversas.
+                En un contexto social que demanda cada vez más comprensión, respeto y acción frente a las diversidades y disidencias sexuales y de género, este diplomado se presenta como una oportunidad formativa esencial para terapeutas, psicólogas y psicólogos comprometidos con una práctica profesional inclusiva y transformadora. Desde una sólida base en teorías feministas y con perspectiva de género, esta formación especializada ofrece herramientas conceptuales y metodológicas para acompañar de manera ética, crítica y sensible a personas y comunidades disidentes.
                 <br />
                 <br />
                 El programa aborda los fundamentos teóricos contemporáneos sobre género, sexualidad y disidencia sexual y de género, integrando análisis históricos, sociales y culturales que permiten comprender las múltiples expresiones identitarias y las desigualdades estructurales que enfrentan las poblaciones en disidencia sexual. Además, se enfatiza la importancia de una intervención profesional que reconozca y desafíe los estereotipos, la discriminación y las violencias basadas en el género y la sexualidad, promoviendo ambientes seguros y respetuosos.
@@ -201,32 +202,105 @@ const diplomadosData: DiplomadosData = {
                 Al concluir este diplomado, las y los participantes estarán capacitados para diseñar y aplicar estrategias de acompañamiento psicológico y social que favorezcan la equidad, la inclusión y el bienestar integral, contribuyendo a la construcción de espacios libres de opresión y exclusión. Esta formación es un llamado a la responsabilidad profesional y social para avanzar hacia una sociedad más justa, plural y respetuosa de las diversidades humanas.
             </>
         ),
-        duracion: "Por definir",
-        modalidad: "En línea y Presencial",
+        duracion: (<><span className="font-bold">3 meses <br/>(8 módulos de fin de semana)</span></>),
+        modalidad: (<><span className="font-bold">Híbrida sincrónica <br/>(No habrá grabaciones).</span></>),
+        requisitos: [
+            "Estudiantes de 2 últimos semestres de Licenciatura en Psicología con Orientación en Clínica, que haya o estén acompañando casos.",
+            "Licenciatura concluida en Psicología.",
+            "Maestría en Psicoterapia (cualquier Enfoque).",
+            "Asistencia mínima del 90% a clases presenciales o virtual y entrega completa de actividades asignadas en plataforma, y realización de un trabajo final de aplicación de conocimientos (los lineamientos serán entregados en el primer módulo) para obtener el certificado de nuestro diplomado.",
+            "Contar con acceso y manejo de plataforma Classroom y Meet.",
+            "Agendar y asistir a una entrevista presencial o virtual, la cuál será acordada y llevada a cabo por alguna de las docentes del Diplomado.",
+            "Entrega digital completa de la documentación requerida al correo: psicoterapia.genero.edu@gmail.com"
+        ],
+        documentos: [
+            "Kardex de último semestre (PDF, no es necesario sea firmado por las autoridades universitarias)",
+            "Carta de pasante o terminación.",
+            "Título de licenciatura.",
+            "Comprobante de domicilio reciente.",
+            "Identificación Oficial",
+            "Carta de motivos personal de media a 1 cuartilla.",
+            "Extracto de C.V.",
+            "Especificar el nombre del diplomado al que aspiras"
+        ],
         contenido: [
-            { modulo: "Por definir", fechas: "", descripcion: "" },
+            {
+                modulo: "Modulo 1",
+                fechas: "2 de Agosto 2026",
+                descripcion:
+                "Epistemologías de la Disidencia y Crítica al Saber-Poder.",
+            },
+            {
+                modulo: "Modulo 2",
+                fechas: "9 de Agosto 2026",
+                descripcion: "Genealogía, Decolonialidad e Interseccionalidad.",
+            },
+            {
+                modulo: "Modulo 3",
+                fechas: "23 de Agosto 2026",
+                descripcion: "Ética, Marco Legal y Violencias Sistémicas.",
+            },
+            {
+                modulo: "Modulo 4",
+                fechas: "30 de Agosto 2026",
+                descripcion: "Subjetividades: Identidad, Deseo y Desarrollo.",
+            },
+            {
+                modulo: "Modulo 5",
+                fechas: "6 de Septiembre 2026",
+                descripcion:
+                "Vínculos, Familias y Afectividades Disidentes.",
+            },
+            {
+                modulo: "Modulo 6",
+                fechas: "20 de Septiembre 2026",
+                descripcion:
+                "Identidades Trans, No Binarias y Tránsitos de Género.",
+            },
+            {
+                modulo: "Modulo 7",
+                fechas: "4 de Octubre 2026",
+                descripcion:
+                "Cuerpos, Erotismo y Placeres en la Clínica.",
+            },
+            {
+                modulo: "Modulo 8",
+                fechas: "18 de Octubre 2026",
+                descripcion:
+                "El Encuentro Terapéutico: Metodología, Posicionamiento y Cierre.",
+            },
         ],
         horarios: [
-            "Por definir",
+            "Domingos de 10:00 a 19:00 hrs.",
+            "Hora de descanso de 14:00 a 15:00 hrs.",
+            "En presencial y/o plataforma. (Hora Centro de México).",
         ],
-        requisitos: ["Por definir"],
-        documentos: ["Por definir"],
         objetivos: [
-            "Brindar herramientas conceptuales y metodológicas para el acompañamiento ético.",
-            "Comprender las múltiples expresiones identitarias y desigualdades estructurales.",
-            "Capacitar en intervenciones sensibles y libres de prejuicios.",
-            "Promover ambientes terapéuticos seguros e inclusivos.",
-            "Desarrollar estrategias de acompañamiento psicológico y social.",
-            "Contribuir a la construcción de espacios libres de opresión y exclusión.",
-            "Fomentar la equidad, inclusión y bienestar integral.",
+            "Capacitar en la aplicación de perspectiva de género en psicoterapia.",
+            "Transformar prácticas terapéuticas tradicionales que reproducen estereotipos patriarcales.",
+            "Desarrollar intervenciones que reparen el malestar individual y contribuyan al empoderamiento.",
+            "Formar profesionales capaces de generar espacios seguros y libres de juicios.",
+            "Integrar la teoría feminista como herramienta terapéutica y política.",
+            "Promover procesos de transformación personal y colectiva.",
         ],
-        inversion: { inscripcion: "Por definir", mensualidad: "Por definir" },
-        opcionesPago: {
-            opcion1: "Por Definir",
-            opcion2: "Por Definir",
-            opcion3: "Por Definir",
+        inversion: {
+            inscripcion: "$500.00 pesos (fecha límite o agotar cupo). Este concepto no es parte de los pagos por módulo.",
+            mensualidad: "Pago por módulo: $1,500, se requiere pago de inscripción.",
         },
-        proceso: ["Por definir"]
+        opcionesPago: {
+            opcion1: (<>
+                Pago en una sola exhibición, sin pago de inscripción. ($12,000 pesos).<br/>
+                <strong>Solo se aceptan transferencias de las personas que requieren facturar (No cambia el costo). Las personas que no facturen, el pago será en efectivo o con retiros sin tarjeta.</strong>
+            </>),
+            opcion2: "Se requiere pagar inscripción, $ 500.00 pesos y el pago por módulo es de $ 1,500.00.",
+            opcion3: "",
+        },
+        proceso: [
+            "Envía Whatsapp al (+52) 33-35-06-83-42 o al (+52) 33-30-66-72-46 con lo siguiente: Diplomado 2 (Especificar : Disidencias sexuales), tu nombre completo y la modalidad de pago que te interesa, ahí daremos seguimiento a pago de inscripción y demás pagos.",
+            "Una vez realizado tu pago de inscripción, acordaremos fecha y nombre de quien te entrevistará, te sumamos a un grupo de Diplomado 2026 para avisos, dudas y por supuesto integración grupal.",
+            "Envía al correo psicoterapia.genero.edu@gmail.com lo documentos mencionados en requisitos de ingreso y petición de beca (si aplicas)",
+            "Una vez inscrita/o te proporcionaremos la contraseña de acceso a plataforma antes del primer módulo."
+        ],
     },
     "vinculaciones-afectivas": {
         activo: false,
@@ -422,6 +496,22 @@ export default async function DiplomadoPage(props: PageProps) {
 
                 {diplomado.activo ? (
                     <>
+                        <div className="relative w-full min-h-[50vh] flex items-center justify-center bg-gray-100 py-8">
+                            <div className="relative w-full max-w-4xl mx-auto px-4">
+                                <Image
+                                src={params.id === 'psicoterapia-genero'
+                                    ? '/images/diplomados/psicoterapia-genero.jpeg'
+                                    : '/images/diplomados/diversidades-sexuales.jpeg'
+                                }
+                                alt={`Diplomado ${params.id === 'psicoterapia-genero' ? 'Psicoterapia con Perspectiva de Género' : 'Acompañamiento en Disidencias Sexuales'}`}
+                                width={1200}
+                                height={800}
+                                className="w-full h-auto rounded-xl shadow-2xl"
+                                priority
+                                quality={100}
+                                />
+                            </div>
+                        </div>
                         {/* Quick Info Grid - Responsive */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                             <div className="bg-white p-4 md:p-6 rounded-xl shadow-sm md:shadow-lg border border-gray-100">
@@ -467,11 +557,34 @@ export default async function DiplomadoPage(props: PageProps) {
                                     </div>
                                     <div>
                                         <h3 className="text-xs md:text-sm font-semibold text-gray-500 uppercase tracking-wider">Inversión</h3>
-                                        <p className="text-base md:text-lg font-bold text-gray-900">Desde $2,000/mes</p>
+                                        <p className="text-base md:text-lg font-bold text-gray-900">{params.id === 'diversidades-sexuales' ? 'Desde $1,500.00/módulo' : 'Desde $2,000/mes'}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        {params.id === 'diversidades-sexuales' && (
+                            <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
+                                <div className="bg-red-50 border border-red-200 rounded-xl md:rounded-2xl p-4 md:p-6">
+                                    <div className="flex items-start">
+                                        <div className="flex-shrink-0">
+                                        <AlertCircle className="w-5 h-5 md:w-6 md:h-6 text-red-600 mr-3" />
+                                        </div>
+                                        <div>
+                                        <h5 className="font-semibold text-red-800 text-sm md:text-base mb-2">
+                                            ⚠️ RESTRICCIÓN DE MODALIDAD
+                                        </h5>
+                                        <p className="text-red-700 text-sm md:text-base leading-relaxed">
+                                            <span className="block md:inline">Solo las personas fuera de Guadalajara pueden tomar los módulos de manera virtual.</span>
+                                        </p>
+                                        <p className="text-red-700 text-sm md:text-base leading-relaxed mt-2">
+                                            <span className="block md:inline">Las personas con residencia en Guadalajara deben acudir siempre de manera presencial.</span>
+                                        </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
 
                         {/* Two Column Layout - Responsive */}
                         <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-12">
@@ -558,7 +671,7 @@ export default async function DiplomadoPage(props: PageProps) {
                                             <p className="text-gray-700 text-sm md:text-base">{diplomado.inversion.inscripcion}</p>
                                         </div>
                                         <div className="bg-white p-4 md:p-6 rounded-lg md:rounded-xl">
-                                            <h4 className="font-semibold text-purple-700 mb-1 md:mb-2 text-sm md:text-base">Mensualidad</h4>
+                                            <h4 className="font-semibold text-purple-700 mb-1 md:mb-2 text-sm md:text-base">{params.id === 'diversidades-sexuales' ? 'Costo por módulo' : 'Mensualidades'}</h4>
                                             <p className="text-gray-700 text-sm md:text-base">{diplomado.inversion.mensualidad}</p>
                                         </div>
                                     </div>
@@ -575,8 +688,26 @@ export default async function DiplomadoPage(props: PageProps) {
                                         )}
                                         {diplomado.opcionesPago.opcion2 && (
                                             <div className="bg-white p-4 md:p-6 rounded-lg md:rounded-xl border-l-4 border-blue-500">
-                                                <h5 className="font-bold text-blue-700 mb-1 md:mb-2 text-sm md:text-base">Opción 2 - Mensualidades</h5>
+                                                <h5 className="font-bold text-blue-700 mb-1 md:mb-2 text-sm md:text-base">Opción 2 - {params.id === 'diversidades-sexuales' ? 'Costo por módulo' : 'Mensualidades'}</h5>
                                                 <p className="text-gray-700 text-sm md:text-base">{diplomado.opcionesPago.opcion2}</p>
+                                            </div>
+                                        )}
+                                        {params.id === 'diversidades-sexuales' && (
+                                            <div className="space-y-2 md:space-y-3">
+                                            <ul className="space-y-2 md:space-y-3 text-sm md:text-base">
+                                                <li className="flex items-start">
+                                                <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
+                                                <span>Pagos en efectivo, acordamos el lugar de entrega</span>
+                                                </li>
+                                                <li className="flex items-start">
+                                                <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
+                                                <span>
+                                                    <span className="font-semibold">Si perteneces a banca electrónica BBVA, Banorte, Santander Serfin, Scotiabank</span> te pedimos usar la modalidad
+                                                    <span className="font-semibold"> Pago o Retiro sin tarjeta</span> que ofrece tu banco enviando código de retiro por Whatsapp al número
+                                                    <span className="font-semibold"> 3335068342</span>
+                                                </span>
+                                                </li>
+                                            </ul>
                                             </div>
                                         )}
                                         {diplomado.opcionesPago.opcion3 && (
@@ -589,6 +720,147 @@ export default async function DiplomadoPage(props: PageProps) {
                                 )}
                             </div>
                         </div>
+
+                        {/* Sección de Becas - Solo visible para diversidades-sexuales */}
+                        {params.id === 'diversidades-sexuales' && (
+                        <div className="mb-8 md:mb-12">
+                            <div className="bg-gradient-to-br from-amber-50 to-yellow-50 border border-amber-200 rounded-xl md:rounded-2xl overflow-hidden shadow-lg">
+                            
+                            {/* Header con icono y título */}
+                            <div className="bg-gradient-to-r from-amber-500 to-yellow-600 px-4 md:px-6 py-4 md:py-5">
+                                <div className="flex items-center">
+                                <div className="p-2 md:p-3 bg-white/20 backdrop-blur-sm rounded-lg mr-3 md:mr-4">
+                                    <GraduationCap className="w-5 h-5 md:w-6 md:h-6 text-white" />
+                                </div>
+                                <div>
+                                    <h3 className="text-lg md:text-2xl font-bold text-white">Oportunidades de Beca</h3>
+                                    <p className="text-xs md:text-sm text-amber-100">Apoyo económico para formación especializada</p>
+                                </div>
+                                </div>
+                            </div>
+
+                            {/* Contenido principal */}
+                            <div className="p-4 md:p-6">
+                                
+                                {/* Tarjeta de disponibilidad */}
+                                <div className="bg-white rounded-lg p-4 md:p-5 mb-4 md:mb-6 shadow-sm border border-amber-100">
+                                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                                    <div className="flex items-center">
+                                    <div className="p-2 bg-amber-100 rounded-full mr-3">
+                                        <span className="w-4 h-4 md:w-5 md:h-5 text-amber-700 font-bold text-sm md:text-base flex items-center justify-center">2</span>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm md:text-base text-gray-600">Becas disponibles</p>
+                                        <p className="text-lg md:text-2xl font-bold text-amber-700">50% de descuento</p>
+                                    </div>
+                                    </div>
+                                    <div className="bg-amber-50 border border-amber-200 rounded-lg px-3 py-2">
+                                    <p className="text-xs md:text-sm text-amber-800">
+                                        <span className="font-semibold">Cupo limitado:</span> Solo 2 becas
+                                    </p>
+                                    </div>
+                                </div>
+                                </div>
+
+                                {/* Información detallada en dos columnas para desktop */}
+                                <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
+                                
+                                {/* Columna izquierda - Cómo solicitar */}
+                                <div className="bg-white rounded-lg p-4 md:p-5 border border-amber-100">
+                                    <h4 className="font-bold text-amber-800 mb-3 md:mb-4 text-base md:text-lg flex items-center">
+                                    <FileText className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                                    ¿Cómo solicitar?
+                                    </h4>
+                                    
+                                    <div className="space-y-3">
+                                    <div className="flex items-start">
+                                        <div className="bg-amber-100 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-2 md:mr-3 flex-shrink-0 mt-0.5">
+                                        <span className="text-amber-700 font-bold text-xs md:text-sm">1</span>
+                                        </div>
+                                        <p className="text-xs md:text-sm text-gray-700">
+                                        <span className="font-semibold">Adjunta un documento</span> titulado <span className="bg-amber-100 px-1.5 py-0.5 rounded font-mono text-xs">PETICIÓN DE BECA</span> al enviar tus documentos
+                                        </p>
+                                    </div>
+                                    
+                                    <div className="flex items-start">
+                                        <div className="bg-amber-100 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-2 md:mr-3 flex-shrink-0 mt-0.5">
+                                        <span className="text-amber-700 font-bold text-xs md:text-sm">2</span>
+                                        </div>
+                                        <p className="text-xs md:text-sm text-gray-700">
+                                        <span className="font-semibold">Comparte brevemente:</span> medio por el que obtienes ingresos
+                                        </p>
+                                    </div>
+                                    
+                                    <div className="flex items-start">
+                                        <div className="bg-amber-100 rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center mr-2 md:mr-3 flex-shrink-0 mt-0.5">
+                                        <span className="text-amber-700 font-bold text-xs md:text-sm">3</span>
+                                        </div>
+                                        <p className="text-xs md:text-sm text-gray-700">
+                                        <span className="font-semibold">Estimado mensual</span> de ingresos y egresos personales
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+
+                                {/* Columna derecha - Documentación requerida */}
+                                <div className="bg-white rounded-lg p-4 md:p-5 border border-amber-100">
+                                    <h4 className="font-bold text-amber-800 mb-3 md:mb-4 text-base md:text-lg flex items-center">
+                                    <CheckCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+                                    Documentación según tu situación
+                                    </h4>
+                                    
+                                    <div className="space-y-3">
+                                    {/* Trabajo en empresa */}
+                                    <div className="border-l-2 border-amber-300 pl-3">
+                                        <p className="font-semibold text-amber-700 text-xs md:text-sm mb-1">🏢 Trabajas en empresa/institución:</p>
+                                        <p className="text-xs md:text-sm text-gray-600">Anexa comprobante de ingresos oficial</p>
+                                    </div>
+                                    
+                                    {/* Trabajo independiente */}
+                                    <div className="border-l-2 border-amber-300 pl-3">
+                                        <p className="font-semibold text-amber-700 text-xs md:text-sm mb-1">💼 Trabajo independiente:</p>
+                                        <p className="text-xs md:text-sm text-gray-600">Confiamos en tu honestidad para compartir la cantidad estimada</p>
+                                    </div>
+                                    
+                                    {/* Información adicional */}
+                                    <div className="mt-3 pt-2 border-t border-amber-100">
+                                        <p className="text-xs md:text-sm text-gray-700">
+                                        <span className="font-semibold">Adicionalmente:</span> Cuéntanos dónde realizas acompañamiento actualmente
+                                        </p>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+
+                                {/* Sección de ética y criterios */}
+                                <div className="bg-amber-100/50 rounded-lg p-4 md:p-5 mb-4 md:mb-6 border border-amber-200">
+                                <div className="flex items-start">
+                                    <div className="p-1.5 md:p-2 bg-amber-200 rounded-full mr-3 flex-shrink-0">
+                                    <Heart className="w-3 h-3 md:w-4 md:h-4 text-amber-700" />
+                                    </div>
+                                    <div>
+                                    <h4 className="font-bold text-amber-800 mb-2 text-sm md:text-base">Nuestro compromiso con la equidad</h4>
+                                    <p className="text-xs md:text-sm text-amber-800 leading-relaxed">
+                                        Desearíamos otorgar todas las peticiones de beca, sin embargo, solo podemos liberar 2. 
+                                        Por eso te pedimos reflexionar sobre tu verdadera necesidad de solicitarla.
+                                    </p>
+                                    </div>
+                                </div>
+                                </div>
+
+                                {/* Nota de cierre */}
+                                <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-amber-200">
+                                <div className="flex items-center text-amber-700">
+                                    <AlertCircle className="w-4 h-4 md:w-5 md:h-5 mr-2 flex-shrink-0" />
+                                    <p className="text-xs md:text-sm italic">
+                                    Las becas se asignan con responsabilidad social, buscando apoyar a quienes más lo requieren
+                                    </p>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        )}
 
                         {/* Calendar Section - Responsive */}
                         <div className="mb-8 md:mb-12">
@@ -628,58 +900,188 @@ export default async function DiplomadoPage(props: PageProps) {
                             </div>
                         </div>
 
-                        {/* Important Notes - Responsive */}
-                        <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
-                            <div className="bg-red-50 border border-red-200 rounded-xl md:rounded-2xl p-4 md:p-6">
-                                <div className="flex items-center mb-3 md:mb-4">
-                                    <AlertCircle className="w-5 h-5 md:w-6 md:h-6 text-red-600 mr-2 md:mr-3" />
-                                    <h4 className="text-base md:text-xl font-bold text-red-700">Avisos Importantes</h4>
+                        {params.id !== 'diversidades-sexuales' && (
+                            <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
+                                <div className="bg-red-50 border border-red-200 rounded-xl md:rounded-2xl p-4 md:p-6">
+                                    <div className="flex items-center mb-3 md:mb-4">
+                                        <AlertCircle className="w-5 h-5 md:w-6 md:h-6 text-red-600 mr-2 md:mr-3" />
+                                        <h4 className="text-base md:text-xl font-bold text-red-700">Avisos Importantes</h4>
+                                    </div>
+                                    <ul className="space-y-2 md:space-y-3 text-red-600 text-sm md:text-base">
+                                        <li className="flex items-start">
+                                            <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
+                                            <span>NO aceptamos depósitos ni transferencias bancarias si no requieres factura</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
+                                            <span>No hay reembolso en caso de deserción</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
+                                            <span>No habrá grabaciones de las sesiones virtuales</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <ul className="space-y-2 md:space-y-3 text-red-600 text-sm md:text-base">
-                                    <li className="flex items-start">
-                                        <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
-                                        <span>NO aceptamos depósitos ni transferencias bancarias si no requieres factura</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
-                                        <span>No hay reembolso en caso de deserción</span>
-                                    </li>
-                                    <li className="flex items-start">
-                                        <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
-                                        <span>No habrá grabaciones de las sesiones virtuales</span>
-                                    </li>
-                                </ul>
                             </div>
+                        )}
+                        {params.id === 'diversidades-sexuales' && (
 
-                            <div className="bg-purple-50 border border-purple-200 rounded-xl md:rounded-2xl p-4 md:p-6">
-                                <h4 className="text-base md:text-xl font-bold text-purple-800 mb-3 md:mb-4">¿Qué incluye tu inversión?</h4>
-                                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
-                                    <li className="flex items-center text-gray-700 text-sm md:text-base">
+                            <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
+                                <div className="bg-red-50 border border-red-200 rounded-xl md:rounded-2xl p-4 md:p-6">
+                                    <div className="flex items-center mb-3 md:mb-4">
+                                        <AlertCircle className="w-5 h-5 md:w-6 md:h-6 text-red-600 mr-2 md:mr-3" />
+                                        <h4 className="text-base md:text-xl font-bold text-red-700">Avisos Importantes</h4>
+                                    </div>
+                                    
+                                    <div className="space-y-4 md:space-y-6">
+                                        {/* Segunda sección - Políticas de pago */}
+                                        <div className="space-y-2 md:space-y-3">
+                                        <h5 className="font-semibold text-red-800 text-sm md:text-base flex items-center">
+                                            <span className="w-1 h-4 md:w-1.5 md:h-5 bg-red-500 rounded-full mr-2"></span>
+                                            POLÍTICAS DE PAGO
+                                        </h5>
+                                        <ul className="space-y-2 md:space-y-3 text-red-600 text-sm md:text-base">
+                                            <li className="flex items-start">
+                                            <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
+                                            <span>No hay reembolso en caso de deserción</span>
+                                            </li>
+                                            <li className="flex items-start">
+                                            <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
+                                            <span>
+                                                Apelamos a la responsabilidad para realizar los pagos puntualmente, por lo tanto, 
+                                                <span className="font-semibold"> no cobramos recargos por atrasos</span> y te invitamos a dialogar en caso de que por motivos personales necesites prórroga de pago
+                                            </span>
+                                            </li>
+                                        </ul>
+                                        </div>
+
+                                        {/* Tercera sección - Modalidad y asistencia */}
+                                        <div className="space-y-2 md:space-y-3">
+                                        <h5 className="font-semibold text-red-800 text-sm md:text-base flex items-center">
+                                            <span className="w-1 h-4 md:w-1.5 md:h-5 bg-red-500 rounded-full mr-2"></span>
+                                            MODALIDAD Y ASISTENCIA
+                                        </h5>
+                                        <ul className="space-y-2 md:space-y-3 text-red-600 text-sm md:text-base">
+                                            <li className="flex items-start">
+                                            <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
+                                            <span>
+                                                <span className="font-semibold">Fechas modificables</span> solo en consenso grupal y por situaciones extraordinarias
+                                            </span>
+                                            </li>
+                                            <li className="flex items-start">
+                                            <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-1.5 md:mt-2 mr-2 md:mr-3 flex-shrink-0"></div>
+                                            <div className="flex-1">
+                                                <span className="font-semibold">Modalidad virtual:</span> Se requiere estar presente en los horarios estipulados, ya que tendremos clase en vivo con las docentes.
+                                                <span className="block mt-1 text-red-500"> Se guardará grabación, previo permiso grupal, se podrá proporcionar con petición personal y por no asistencia justificada</span>
+                                            </div>
+                                            </li>
+                                        </ul>
+                                        </div>
+
+                                        {/* Nota adicional */}
+                                        <div className="mt-4 pt-4 border-t border-red-200">
+                                        <p className="text-xs md:text-sm text-red-500 italic flex items-start">
+                                            <AlertCircle className="w-3 h-3 md:w-4 md:h-4 mr-1 flex-shrink-0 mt-0.5" />
+                                            <span>Es importante leer y comprender todos los avisos antes de realizar tu inscripción</span>
+                                        </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {params.id !== 'diversidades-sexuales' && (
+                            <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
+                                <div className="bg-purple-50 border border-purple-200 rounded-xl md:rounded-2xl p-4 md:p-6">
+                                    <h4 className="text-base md:text-xl font-bold text-purple-800 mb-3 md:mb-4">¿Qué incluye tu inversión?</h4>
+                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
+                                            <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
+                                            Coffee break (presencial)
+                                        </li>
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
+                                            <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
+                                            Materiales virtuales y presenciales
+                                        </li>
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
+                                            <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
+                                            Asesorías para trabajo final
+                                        </li>
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
+                                            <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
+                                            Constancia avalada
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        )}
+
+                        {params.id === 'diversidades-sexuales' && (
+                            <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
+                                <div className="bg-purple-50 border border-purple-200 rounded-xl md:rounded-2xl p-4 md:p-6">
+                                    <h4 className="text-base md:text-xl font-bold text-purple-800 mb-3 md:mb-4">¿Qué incluye tu inversión?</h4>
+                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                                        {/* Elementos existentes */}
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
                                         <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
                                         Coffee break (presencial)
-                                    </li>
-                                    <li className="flex items-center text-gray-700 text-sm md:text-base">
+                                        </li>
+                                        
+                                        {/* Materiales - ahora más específico */}
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
                                         <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
-                                        Materiales virtuales y presenciales
-                                    </li>
-                                    <li className="flex items-center text-gray-700 text-sm md:text-base">
+                                        Materiales virtuales
+                                        </li>
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
                                         <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
-                                        Asesorías para trabajo final
-                                    </li>
-                                    <li className="flex items-center text-gray-700 text-sm md:text-base">
+                                        Materiales para trabajo presencial
+                                        </li>
+                                        
+                                        {/* Asesorías - con detalle */}
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
                                         <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
-                                        Constancia avalada
-                                    </li>
-                                </ul>
+                                        Asesorías extra clases con docentes para trabajo final
+                                        </li>
+                                        
+                                        {/* Constancia - con detalle de la institución */}
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
+                                        <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
+                                        Constancia avalada por Centro de Psicoterapia y Sexologia Basade en Estudios de Género
+                                        </li>
+                                        
+                                        {/* Elementos nuevos */}
+                                        <li className="flex items-center text-gray-700 text-sm md:text-base">
+                                        <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-500 mr-2 md:mr-3 flex-shrink-0" />
+                                        Acto académico y celebración de cierre
+                                        </li>
+                                    </ul>
+
+                                    {/* Nota de respaldo */}
+                                    <p className="text-sm text-purple-500 mt-4 pt-3 border-t border-purple-200">
+                                        *Todas las asesorías y materiales están incluidos sin costo adicional durante la duración del diplomado
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        )}
 
                         {/* Desktop CTA Section */}
                         <div className="hidden md:block bg-gradient-to-r from-purple-600 to-indigo-700 rounded-2xl shadow-2xl p-8 md:p-12 text-center text-white mb-12">
-                            <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">¿Listo para transformar tu práctica profesional?</h3>
-                            <p className="text-lg md:text-xl text-purple-100 mb-6 md:mb-8 max-w-2xl mx-auto">
-                                Forma parte de una comunidad terapéutica comprometida con la perspectiva de género
-                            </p>
+                            {params.id === 'diversidades-sexuales' ? (
+                                <>
+                                    <p className="text-lg md:text-xl text-purple-100 mb-6 md:mb-8 max-w-2xl mx-auto">
+                                        Esperamos coincidir, aprender mutuamente, construir en colectividad y compartir al mundo un acompañamiento clínico de las disidencias sexuales y de género.
+                                    </p>
+                                    <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Saludos cordiales del equipo de trabajo.</h3>
+                                </>
+                            ): (
+                                <>
+                                    <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">¿Listo para transformar tu práctica profesional?</h3>
+                                    <p className="text-lg md:text-xl text-purple-100 mb-6 md:mb-8 max-w-2xl mx-auto">
+                                        Forma parte de una comunidad terapéutica comprometida con la perspectiva de género
+                                    </p>
+                                </>
+                            )}
+                            
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                 <Link href="https://wa.me/523335068342" className="inline-flex items-center justify-center bg-white text-purple-700 px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold text-base md:text-lg hover:bg-purple-50 transition-colors">
                                     <FaWhatsapp className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3" />

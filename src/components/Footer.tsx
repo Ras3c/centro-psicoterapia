@@ -25,7 +25,7 @@ export default function Footer() {
               <Image
                 src={'/images/logo_footer2.png'}
                 alt={'Logo Footer'}
-                width={200} 
+                width={200}
                 height={600}
                 className="inline-block ml-2"
               />
